@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Pendaftaran Siswa Baru</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="navbar">
+  <div class="logo">
+    <img src="logo.png" alt="Logo">
+    <div>
+      <h3>SDIT</h3>
+      <p>ARROSAANIYYAH</p>
+    </div>
+  </div>
+
+  <nav class="menu">
+    <a href="index.html">Home</a>
+    <a href="daftar.html" class="active">Pendaftaran</a>
+  </nav>
+</header>
+
+<section style="padding:60px;">
+  <h2 style="margin-bottom:20px;">Form Pendaftaran Peserta Didik Baru</h2>
+
+  <form action="proses_daftar.html" method="POST" style="max-width:500px;">
+    
+    <label>Nama Lengkap</label><br>
+    <input type="text" name="nama" required style="width:100%; padding:10px; margin-bottom:15px;"><br>
+
+    <label>NISN</label><br>
+    <input type="text" name="nisn" required style="width:100%; padding:10px; margin-bottom:15px;"><br>
+
+    <label>Tempat Lahir</label><br>
+    <input type="text" name="tempat_lahir" required style="width:100%; padding:10px; margin-bottom:15px;"><br>
+
+    <label>Tanggal Lahir</label><br>
+    <input type="date" name="tanggal_lahir" required style="width:100%; padding:10px; margin-bottom:15px;"><br>
+
+    <label>Alamat</label><br>
+    <textarea name="alamat" required style="width:100%; padding:10px; margin-bottom:15px;"></textarea><br>
+
+    <label>Nama Orang Tua</label><br>
+    <input type="text" name="nama_ortu" required style="width:100%; padding:10px; margin-bottom:15px;"><br>
+
+    <label>No HP</label><br>
+    <input type="text" name="no_hp" required style="width:100%; padding:10px; margin-bottom:15px;"><br>
+
+    <label>Email</label><br>
+    <input type="email" name="email" required style="width:100%; padding:10px; margin-bottom:15px;"><br>
+
+    <button type="submit" style="padding:12px 20px; background:green; color:white; border:none; border-radius:10px; cursor:pointer;">
+      Kirim Pendaftaran
+    </button>
+
+  </form>
+</section>
+
+</body>
+</html>

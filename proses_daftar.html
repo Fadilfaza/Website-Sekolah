@@ -1,0 +1,23 @@
+<?php
+include "daftar.php";
+
+$nama          = $_POST['nama'];
+$nisn          = $_POST['nisn'];
+$tempat_lahir  = $_POST['tempat_lahir'];
+$tanggal_lahir = $_POST['tanggal_lahir'];
+$alamat        = $_POST['alamat'];
+$nama_ortu     = $_POST['nama_ortu'];
+$no_hp         = $_POST['no_hp'];
+$email         = $_POST['email'];
+
+$query = "INSERT INTO santri_baru 
+(nama, nisn, tempat_lahir, tanggal_lahir, alamat, nama_ortu, no_hp, email)
+VALUES
+('$nama', '$nisn', '$tempat_lahir', '$tanggal_lahir', '$alamat', '$nama_ortu', '$no_hp', '$email')";
+
+if(mysqli_query($conn, $query)){
+    echo "<script>alert('Pendaftaran berhasil dikirim!'); window.location='index.php';</script>";
+}else{
+    echo "Gagal menyimpan data: " . mysqli_error($conn);
+}
+?>
