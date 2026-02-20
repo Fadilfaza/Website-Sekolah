@@ -69,15 +69,16 @@
 
       <!-- Tombol Bahasa -->
       
-      <div class="lang-switch">
-      <button class="lang-btn active" onclick="setLanguage('id')" id="btn-id">
-         ID
-      </button>
+     <div class="language">
+  <div class="lang-selected" onclick="toggleLang()">
+     <span id="current-lang">ID</span> ▼
+  </div>
 
-      <button class="lang-btn" onclick="setLanguage('en')" id="btn-en">
-         EN
-      </button>
-      </div>
+  <div class="lang-options" id="langOptions">
+    <div onclick="setLang('id')"> Indonesia</div>
+    <div onclick="setLang('en')"> English</div>
+  </div>
+</div>
 
 
       <!-- SOSIAL MEDIA -->
@@ -667,34 +668,42 @@ setInterval(() => {
 </script>
 
 <script>
-function setLanguage(lang) {
-  const elements = document.querySelectorAll("[data-id]");
-
-  elements.forEach(el => {
-    el.innerHTML = el.getAttribute("data-" + lang);
-  });
-
-  // tombol active
-  document.getElementById("btn-id").classList.remove("active");
-  document.getElementById("btn-en").classList.remove("active");
-
-  if (lang === "id") {
-    document.getElementById("btn-id").classList.add("active");
-  } else {
-    document.getElementById("btn-en").classList.add("active");
-  }
-
-  // simpan pilihan bahasa agar tidak reset ketika refresh
-  localStorage.setItem("language", lang);
+function toggleLang() {
+  const menu = document.getElementById("langOptions");
+  menu.style.display = menu.style.display === "block" ? "none" : "block";
 }
 
-// auto load bahasa terakhir
-window.addEventListener("load", () => {
-  const savedLang = localStorage.getItem("language") || "id";
-  setLanguage(savedLang);
+function setLang(lang) {
+  document.getElementById("current-lang").innerText = lang.toUpperCase();
+  document.getElementById("langOptions").style.display = "none";
+
+  // Panggil fungsi ganti bahasa kamu di sini
+  changeLanguage(lang);
+}
+
+// klik luar = tutup dropdown
+window.addEventListener("click", function(e){
+  if (!e.target.closest(".language")) {
+    document.getElementById("langOptions").style.display = "none";
+  }
 });
 </script>
 
+<script>
+function changeLanguage(lang) {
+
+  const elements = document.querySelectorAll("[data-id]");
+
+  elements.forEach(el => {
+    if (lang === "en") {
+      el.innerText = el.getAttribute("data-en");
+    } else {
+      el.innerText = el.getAttribute("data-id");
+    }
+  });
+
+}
+</script>
 
 
 <script>
@@ -721,4 +730,3 @@ document.addEventListener("click", function(event) {
 
 </body>
 </html>
-
