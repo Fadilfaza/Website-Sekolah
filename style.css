@@ -1554,4 +1554,18 @@ height: 130px;
   }
 }
 
+a, button {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.social-icons a {
+  outline: none;
+}
+
+.social-icons a:focus,
+.social-icons a:active {
+  outline: none;
+  box-shadow: none;
+}
+
 
