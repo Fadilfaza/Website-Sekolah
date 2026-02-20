@@ -1462,32 +1462,44 @@ height: 130px;
   display: flex;
   align-items: center;
   gap: 8px;
-  background: rgba(255,255,255,0.15);
+  background: rgba(255, 255, 255, 0.15);
   padding: 5px;
   border-radius: 30px;
   backdrop-filter: blur(10px);
 }
 
-.lang-btn {
-  border: none;
-  background: transparent;
-  color: rgb(212, 32, 32);
-  font-size: 13px;
-  font-weight: 600;
-  padding: 8px 14px;
-  border-radius: 20px;
+.language {
+  position: relative;
+  font-size: 14px;
   cursor: pointer;
-  transition: 0.3s ease;
 }
 
-.lang-btn:hover {
-  background: rgba(255,255,255,0.25);
-}
-
-.lang-btn.active {
+.lang-selected {
   background: white;
-  color:#13780a;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  padding: 6px 12px;
+  border-radius: 20px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+.lang-options {
+  position: absolute;
+  top: 40px;
+  right: 0;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  display: none;
+  overflow: hidden;
+  min-width: 150px;
+}
+
+.lang-options div {
+  padding: 10px;
+  transition: 0.2s;
+}
+
+.lang-options div:hover {
+  background: #077003;
 }
 
 /* HP: Hilangkan sosial media atas */
@@ -1528,21 +1540,5 @@ height: 130px;
     display: flex;
   }
 }
-
-@media (max-width:480px) {
-  .logo-text h3 {
-    font-size: 14px;
-    white-space: nowrap;
-  }
-  .logo-text p {
-    font-size: 11px;
-    white-space: normal;
-  }
-  .lang-btn {
-    padding: 6px 10px;
-    font-size: 12px;
-  }
-}
-
 
 
