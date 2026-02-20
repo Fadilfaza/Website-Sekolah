@@ -11,6 +11,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="style.css?v=<?echo time(); ?>">
+  
+  
 </head>
 
 <body>
@@ -25,6 +27,9 @@
   </div>
 
 
+
+
+
 <header class="navbar">
   <div class="logo">
     <img src="logo ar.png" alt="Logo">
@@ -35,13 +40,55 @@
   </div>
 
   <nav class="menu" id="menu">
-  <a href="#visi" >Home</a>
-  <a href="#profil">Profil</a>
-  <a href="#galeri">Galeri</a>
-  <a href="#news">Kabar Terbaru</a>
-  <a href="#kontak">Contact</a>
-</nav>
+    <a href="#beranda" data-id="Beranda" data-en="Home">Beranda</a>
+    <a href="#profil" data-id="Profil" data-en="Profile">Profil</a>
+    <a href="#galeri" data-id="Galeri" data-en="Gallery">Galeri</a>
+    <a href="#news" data-id="Kabar Terbaru" data-en="Latest News">Kabar Terbaru</a>
+    <a href="#kontak" data-id="Kontak" data-en="Contact">Kontak</a>
 
+      <!-- SOSIAL MEDIA DI MENU HP -->
+
+  <div class="menu-social">
+    <a href="https://www.instagram.com/sdit.arrosaaniyyah?igsh=MW5rcTZsMjZpbXY0aw==" target="_blank">
+      <img src="ig.png">
+    </a>
+
+    <a href="https://www.tiktok.com/@sditarrosaaniyyah?_r=1&_t=ZS-944fMrDlTei" target="_blank">
+      <img src="tiktok.png" >
+    </a>
+
+    <a href="https://facebook.com/" target="_blank">
+      <img src="fb.png" >
+    </a>
+  </div>
+
+</nav>
+  <div class="menu-backdrop" id="backdrop"></div>
+
+    <div class="navbar-right">
+
+      <!-- Tombol Bahasa -->
+      
+      <div class="lang-switch">
+      <button class="lang-btn active" onclick="setLanguage('id')" id="btn-id">
+         ID
+      </button>
+
+      <button class="lang-btn" onclick="setLanguage('en')" id="btn-en">
+         EN
+      </button>
+      </div>
+
+
+      <!-- SOSIAL MEDIA -->
+      <a href="https://www.instagram.com/sdit.arrosaaniyyah?igsh=MW5rcTZsMjZpbXY0aw==" target="_blank" class="social-icon">
+      <img src="ig.png"></a>
+       <a href="https://www.tiktok.com/@sditarrosaaniyyah?_r=1&_t=ZS-944fMrDlTei" target="_blank" class="social-icon">
+      <img src="tiktok.png"></a>
+      <a href="https://facebook.com/USERNAME" target="_blank" class="social-icon">
+      <img src="fb.png"></a>
+
+    </div>
 <a href="#kontak" class="btn-contact">Hubungi Kami</a>
 
 <div class="hamburger" onclick="toggleMenu()">
@@ -49,46 +96,94 @@
 </div>
 
 
+
+
  
 </header>
 
 
-<section class="hero">
+<section class="hero-slider" id="beranda">
 
-  <div class="hero-content">
-    <p class="tahun">Tahun Ajaran 2026-2027</p>
+  <div class="hero-slide active" style="background-image: url('sekolah.jpeg');">
+    <div class="hero-overlay"></div>
 
-    <h1>
-      Informasi Pendaftaran <span>Peserta Didik</span> Baru
-    </h1>
+    <div class="hero-content">
+      <h1 data-id="Selamat Datang di SDIT ARROSAANIYYAH" 
+    data-en="Welcome to SDIT ARROSAANIYYAH">
+    Selamat Datang di SDIT ARROSAANIYYAH
+</h1>
 
-    <p class="desc">
-      SDIT ARROSAANIYYAH membuka pendaftaran peserta didik baru.
-      Bergabunglah bersama kami untuk belajar dalam lingkungan islami,
-      disiplin, dan berprestasi.
-    </p>
+<p data-id="Membentuk Generasi Qurani Beriman, Berilmu dan Berakhlak Mulia."
+   data-en="Building a Qur'anic generation with faith, knowledge, and noble character.">
+   Membentuk Generasi Qurani Beriman, Berilmu dan Berakhlak Mulia.
+</p>
 
-    <div class="list">
-      <p>✔ Lingkungan belajar nyaman dan kondusif</p>
-      <p>✔ Pengajar profesional dan berpengalaman</p>
-      <p>✔ Program pendidikan terstruktur dan menyeluruh</p>
+<a href="https://docs.google.com/forms/d/e/1FAIpQLScmlnl_RiaE81gz0NQWIwCcYqNnsxbs5ESYUMrUTzRJyR2wXQ/viewform?usp=header"
+   class="btn-hero"
+   data-id="Daftar Sekarang"
+   data-en="Register Now">
+   Daftar Sekarang
+</a>
+
     </div>
-
-    <a href="https://docs.google.com/forms/d/e/1FAIpQLScmlnl_RiaE81gz0NQWIwCcYqNnsxbs5ESYUMrUTzRJyR2wXQ/viewform?usp=header" class="btn-daftar">Daftarkan Sekarang</a>
   </div>
 
+  <div class="hero-slide" style="background-image: url('guru.jpeg');">
+    <div class="hero-overlay"></div>
 
-  <div class="hero-image">
-    <img src="" alt="">
+    <div class="hero-content">
+      <h1 data-id="Pendidikan Islam Terpadu"
+    data-en="Integrated Islamic Education">
+    Pendidikan Islam Terpadu
+      </h1>
+
+    <p data-id="Ilmu Umum & Ilmu Agama seimbang untuk masa depan anak."
+   data-en="Balancing general knowledge and Islamic education for your child's future.">
+   Ilmu Umum & Ilmu Agama seimbang untuk masa depan anak.</p>
+    </div>
+  </div>
+
+  <div class="hero-slide" style="background-image: url('wisuda.jpg');">
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+      <h1 data-id="Lingkungan Nyaman & Islami"
+    data-en="Comfortable & Islamic Environment">
+    Lingkungan Nyaman & Islami
+      </h1>
+
+  <p data-id="Belajar dengan suasana yang aman, nyaman, dan penuh keberkahan."
+   data-en="Learn in a safe, comfortable, and blessed environment.">
+   Belajar dengan suasana yang aman, nyaman, dan penuh keberkahan.
+  </p>
+
+    </div>
+  </div>
+
+  <!-- NAVIGATION -->
+  <button class="hero-btn prev" onclick="prevSlide()">❮</button>
+  <button class="hero-btn next" onclick="nextSlide()">❯</button>
+
+  <!-- DOTS -->
+  <div class="hero-dots">
+    <span class="dot active" onclick="goSlide(0)"></span>
+    <span class="dot" onclick="goSlide(1)"></span>
+    <span class="dot" onclick="goSlide(2)"></span>
   </div>
 
 </section>
+
 
 <section class="Visi-section" id="visi">
   <div class="container">
 
     <div class="section-title">
-      <span class="tag-title">VISI MISI & PROGRAM UNGGULAN</span>
+      <span class="tag-title"
+      data-id="VISI MISI & PROGRAM UNGGULAN"
+      data-en="VISION, MISSION & EXCELLENCE PROGRAMS">
+      VISI MISI & PROGRAM UNGGULAN
+      </span>
+
       <div class="line-title"></div>
     </div>
 
@@ -98,29 +193,64 @@
         <div class="icon-circle">
           <img src="globe.png" alt="Visi">
         </div>
-        <h3>Visi</h3>
-        <p>Mewujudkan Genarasi Qurani yang beriman, berilmu luas dan berakhlak mulia untuk menjadi pemimpin masa depan yang bermanfaatt bagi umat dan bangsa.</p>
+        <h3 data-id="Visi"
+    data-en="Vision">
+    Visi
+        </h3>
+
+    <p data-id="Mewujudkan Generasi Qurani yang beriman, berilmu luas dan berakhlak mulia untuk menjadi pemimpin masa depan yang bermanfaat bagi umat dan bangsa."
+   data-en="To create a Qur'anic generation with strong faith, broad knowledge, and noble character, becoming future leaders who bring benefit to the nation and society.">
+   Mewujudkan Generasi Qurani yang beriman, berilmu luas dan berakhlak mulia untuk menjadi pemimpin masa depan yang bermanfaatt bagi umat dan bangsa.
+    </p>
+
       </div>
 
       <div class="Visi-card">
         <div class="icon-circle">
           <img src="buku.png" alt="Misi">
         </div>
-        <h3>Misi</h3>
-        <p>Menyelenggarakan pendidikan berkualitas yang mengintegrasikan ilmu agama dan ilmu umum secara seimbang</p>
+        <h3 data-id="Misi"
+            data-en="Mission">
+             Misi
+        </h3>
+
+    <p  data-id="Menyelenggarakan pendidikan berkualitas yang mengintegrasikan ilmu agama dan ilmu umum."
+        data-en="To provide quality education by integrating Islamic knowledge and general knowledge in balance.">
+        Menyelenggarakan pendidikan berkualitas yang mengintegrasikan ilmu agama dan ilmu umum
+    </p>
+
       </div>
 
       <div class="Visi-card">
         <div class="icon-circle">
           <img src="bintang.png" alt="Program Unggulan">
         </div>
-        <h3>Program Unggulan</h3>
-        <ul>
-          <li>Tahfizh Al-Qur'an</li>
-          <li>Bahasa Inggris</li>
-          <li>Bahasa Arab</li>
-          <li>Informatika</li>
-        </ul>
+        <h3 data-id="Program Unggulan"
+            data-en="Excellence Programs">
+            Program Unggulan
+        </h3>
+
+      <ul>
+          <li data-id="Tahfizh Al-Qur'an"
+              data-en="Qur'an Memorization (Tahfizh)">
+              Tahfizh Al-Qur'an
+          </li>
+
+          <li data-id="Bahasa Inggris"
+              data-en="English Language">
+              Bahasa Inggris
+          </li>
+
+          <li data-id="Bahasa Arab"
+              data-en="Arabic Language">
+              Bahasa Arab
+          </li>
+
+          <li data-id="Informatika"
+              data-en="Computer & Informatics">
+              Informatika
+          </li>
+      </ul>
       </div>
 
     </div>
@@ -136,9 +266,6 @@
     <div class="slides">
       <img src="sekolah.jpeg" alt="Foto Sekolah">
       <img src="sholat.jpeg" alt="sholat dhuha">
-      <img src="pramuka.jpg" alt="pramuka">
-      <img src="upacara.jpg" alt="upacara">
-      <img src="wisuda.jpg" alt="wisuda">
     </div>
 
     <button class="prev">&#10094;</button>
@@ -147,10 +274,18 @@
   </div>
 
 </div>
-
-
     <div class="tentang-text">
-      <div class="about-content"> <h2> Tentang SDIT ARROSAANIYYAH</h2> <p>SDIT ARROSAANIYYAH adalah lembaga pendidikan Islam yang berkomitmen membentuk generasi yang beriman, berilmu, dan berakhlak mulia. Dengan pembelajaran terpadu antara ilmu agama dan ilmu umum</p>
+      <div class="about-content"> 
+        <h2 data-id="Tentang SDIT ARROSAANIYYAH"
+            data-en="About SDIT ARROSAANIYYAH">
+            Tentang SDIT ARROSAANIYYAH
+        </h2>
+
+        <p data-id="SDIT ARROSAANIYYAH adalah lembaga pendidikan Islam yang berkomitmen membentuk generasi yang beriman, berilmu, dan berakhlak mulia. Dengan pembelajaran terpadu antara ilmu agama dan ilmu umum."
+          data-en="SDIT ARROSAANIYYAH is an Islamic educational institution committed to shaping a generation with faith, knowledge, and noble character through integrated learning between Islamic studies and general education.">
+          SDIT ARROSAANIYYAH adalah lembaga pendidikan Islam yang berkomitmen membentuk generasi yang beriman, berilmu, dan berakhlak mulia. Dengan pembelajaran terpadu antara ilmu agama dan ilmu umum
+        </p>
+
     </div>
   </div>
 </section>
@@ -159,7 +294,12 @@
   <div class="container">
 
     <div class="section-title">
-      <span class="tag-title">KENAPA MEMILIH SDIT ARROSAANIYYAH ?</span>
+      <span class="tag-title"
+      data-id="KENAPA MEMILIH SDIT ARROSAANIYYAH ?"
+      data-en="WHY CHOOSE SDIT ARROSAANIYYAH?">
+      KENAPA MEMILIH SDIT ARROSAANIYYAH ?
+      </span>
+
       <div class="line-title"></div>
     </div>
 
@@ -169,88 +309,89 @@
         <div class="icon-circle">
           <img src="Al-qur'an.png" alt="Tahfizh">
         </div>
-        <h3>Tahfizh Al-Qur’an</h3>
-        <p>
-          Pembinaan hafalan Al-Qur’an secara terarah dan konsisten untuk membentuk generasi Qur’ani.
-        </p>
+        <h3 data-id="Tahfizh Al-Qur’an"
+            data-en="Qur'an Memorization (Tahfizh)">
+            Tahfizh Al-Qur’an
+        </h3>
+
+      <p data-id="Pembinaan hafalan Al-Qur’an secara terarah dan konsisten untuk membentuk generasi Qur’ani."
+         data-en="Guided and consistent Qur'an memorization program to build a strong Qur'anic generation.">
+        Pembinaan hafalan Al-Qur’an secara terarah dan konsisten untuk membentuk generasi Qur’ani.
+      </p>
+
       </div>
 
       <div class="Visi-card">
         <div class="icon-circle">
           <img src="Toga wisuda.png" alt="Pendidikan">
         </div>
-        <h3>Pendidikan Berkualitas</h3>
-        <p>
-          Pembelajaran modern dengan guru profesional yang membimbing siswa menjadi cerdas dan mandiri.
+        <h3 data-id="Pendidikan Berkualitas"
+            data-en="Quality Education">
+            Pendidikan Berkualitas
+        </h3>
+
+        <p data-id="Pembelajaran modern dengan guru profesional yang membimbing siswa menjadi cerdas dan mandiri."
+           data-en="Modern learning supported by professional teachers who guide students to become smart and independent.">
+        Pembelajaran modern dengan guru profesional yang membimbing siswa menjadi cerdas dan mandiri.
         </p>
+
       </div>
 
       <div class="Visi-card">
         <div class="icon-circle">
           <img src="masjid.png" alt="Akhlak Islami">
         </div>
-        <h3>Akhlak & Adab Islami</h3>
-        <p>
+        <h3 data-id="Akhlak & Adab Islami"
+            data-en="Islamic Character & Manners">
+            Akhlak & Adab Islami
+        </h3>
+
+        <p data-id="Membentuk karakter islami melalui pembiasaan ibadah, disiplin, dan adab dalam kehidupan sehari-hari."
+           data-en="Building Islamic character through daily worship habits, discipline, and good manners in everyday life.">
           Membentuk karakter islami melalui pembiasaan ibadah, disiplin, dan adab dalam kehidupan sehari-hari.
         </p>
+
       </div>
 
     </div>
   </div>
 </section>
 
-<section class="galeri" id="galeri">
-  <div class="container">
+<section class="gallery-section">
 
-    <div class="section-title">
-      <span class="tag-title">GALERI KEGIATAN</span>
-      <div class="line-title"></div>
+  <div class="tag-title">  
+      <h2 data-id="GALERI KEGIATAN"
+          data-en="ACTIVITY GALLERY">
+        GALERI KEGIATAN
+      </h2>
+  </div>
+
+  <div class="gallery-grid">
+
+    <div class="gallery-item">
+      <img src="sholat.jpeg" alt="Sholat Dhuha">
+      <div class="gallery-overlay">Sholat Dhuha</div>
     </div>
 
-    <div class="galeri-grid">
+    <div class="gallery-item">
+      <img src="upacara.jpg" alt="Upacara Sekolah">
+      <div class="gallery-overlay">Upacara Sekolah</div>
+    </div>
 
-      <div class="galeri-item">
-        <img src="sholat.jpeg">
-        <div class="galeri-overlay">
-          <h3>Sholat Dhuha</h3>
-        </div>
-      </div>
+    <div class="gallery-item">
+      <img src="pramuka2.jpeg" alt="Ekstrakurikuler">
+      <div class="gallery-overlay">Ekstrakurikuler</div>
+    </div>
 
-      <div class="galeri-item">
-        <img src="upacara.jpg" alt="Kegiatan 2">
-        <div class="galeri-overlay">
-          <h3>Upacara Sekolah</h3>
-        </div>
-      </div>
-
-      <div class="galeri-item">
-        <img src="lab.jpg" >
-        <div class="galeri-overlay">
-          <h3>Pembelajaran Kelas</h3>
-        </div>
-      </div>
-
-      <div class="galeri-item">
-        <img src="pramuka.jpg" >
-        <div class="galeri-overlay">
-          <h3>Ekstrakurikuler</h3>
-        </div>
-      </div>
-
-      <div class="galeri-item">
-        <img src="guru.png" >
-        <div class="galeri-overlay">
-          <h3>Hari Guru Nasional</h3>
-        </div>
-      </div>
+    <div class="gallery-item">
+      <img src="nanem.jpeg" alt="">
+      <div class="gallery-overlay">Ekstrakurikuler</div>
+    </div>
 
     
 
-    </div>
-
   </div>
 </section>
-
 
 
 
@@ -258,8 +399,16 @@
 <section class="news" id="news">
   
   <div class="news-header">
-    <h2>Kabar Terbaru</h2>
-    <p>Informasi kegiatan terbaru SDIT ARROSAANIYYAH</p>
+  <h2 data-id="Kabar Terbaru"
+      data-en="Latest News">
+      Kabar Terbaru
+  </h2>
+
+  <p data-id="Informasi kegiatan terbaru SDIT ARROSAANIYYAH"
+     data-en="Latest activity updates from SDIT ARROSAANIYYAH">
+      Informasi kegiatan terbaru SDIT ARROSAANIYYAH
+  </p>
+
   </div>
 
   <div class="news-grid">
@@ -267,36 +416,81 @@
     <div class="news-card">
       <img src="futsal.jpeg" alt="Berita 1">
       <div class="news-content">
-        <span class="news-date">10 Januari 2026</span>
-        <h3>Futsal</h3>
-        <p>
-          SDIT ARROSAANIYYAH mengadakan lomba futsal antar kelas yang disambut meriah oleh para siswa.
-        </p>
-        <a href="#" class="news-btn">Baca Selengkapnya →</a>
+    <span class="news-date"
+      data-id="10 Januari 2026"
+      data-en="January 10, 2026">
+      10 Januari 2026
+    </span>
+
+    <h3 data-id="Futsal"
+      data-en="Futsal Competition">
+      Futsal
+    </h3>
+
+    <p data-id="SDIT ARROSAANIYYAH mengadakan lomba futsal antar kelas yang disambut meriah oleh para siswa."
+       data-en="SDIT ARROSAANIYYAH held an inter-class futsal competition that was enthusiastically welcomed by the students.">
+        SDIT ARROSAANIYYAH mengadakan lomba futsal antar kelas yang disambut meriah oleh para siswa.
+    </p>
+
+    <a href="#" class="news-btn"
+        data-id="Baca Selengkapnya →"
+        data-en="Read More →">
+        Baca Selengkapnya →
+    </a>
+
       </div>
     </div>
 
     <div class="news-card">
       <img src="arfest.jpeg" alt="Berita 2">
       <div class="news-content">
-        <span class="news-date">30 Oktober 2025</span>
-        <h3>Arrosaaniyyah Festival (ARRFEST)</h3>
-        <p>
-          Para siswa mengikuti Arrosaaniyyah Festival.
-        </p>
-        <a href="#" class="news-btn">Baca Selengkapnya →</a>
+        <span class="news-date"
+            data-id="10 Desember 2025"
+            data-en="December 10, 2025">
+            10 Desember 2026
+        </span>
+    <h3 data-id="Arrosaaniyyah Festival (ARRFEST)"
+        data-en="Arrosaaniyyah Festival (ARRFEST)">
+        Arrosaaniyyah Festival (ARRFEST)
+    </h3>
+    <p data-id="Para siswa mengikuti Arrosaaniyyah Festival."
+       data-en="Students participated in the Arrosaaniyyah Festival.">
+      Para siswa mengikuti Arrosaaniyyah Festival.
+    </p>
+
+  <a href="#" class="news-btn"
+    data-id="Baca Selengkapnya →"
+    data-en="Read More →">
+      Baca Selengkapnya →
+  </a>
+
       </div>
     </div>
 
     <div class="news-card">
       <img src="pramuka.jpeg" alt="Berita 3">
       <div class="news-content">
-        <span class="news-date">5 Februari 2026</span>
-        <h3>Pramuka</h3>
-        <p>
-          Kegiatan pramuka dilaksanakan untuk membentuk karakter disiplin, mandiri, dan berjiwa pemimpin.
-        </p>
-        <a href="#" class="news-btn">Baca Selengkapnya →</a>
+    <span class="news-date"
+      data-id="5 Februari 2026"
+      data-en="February 5, 2026">
+      5 Februari 2026
+    </span>
+
+    <h3 data-id="Pramuka"
+        data-en="Scouting Activities">
+        Pramuka
+    </h3>
+
+    <p data-id="Kegiatan pramuka dilaksanakan untuk membentuk karakter disiplin, mandiri, dan berjiwa pemimpin."
+       data-en="Scouting activities are carried out to build discipline, independence, and leadership character.">
+      Kegiatan pramuka dilaksanakan untuk membentuk karakter disiplin, mandiri, dan berjiwa pemimpin.
+    </p>
+
+    <a href="#" class="news-btn"
+        data-id="Baca Selengkapnya →"
+        data-en="Read More →">
+        Baca Selengkapnya →
+    </a>
       </div>
     </div>
 
@@ -307,7 +501,11 @@
   <div class="container">
 
     <div class="section-title">
-      <span class="tag-title">KONTAK KAMI</span>
+      <span class="tag-title"
+        data-id="KONTAK"
+        data-en="CONTACT">
+        KONTAK
+      </span>
       <div class="line-title"></div>
     </div>
 
@@ -315,18 +513,27 @@
 
       <!-- INFO KONTAK -->
       <div class="kontak-box">
-        <h3>Hubungi Kami</h3>
-        <p>
-          Silakan hubungi kami untuk informasi pendaftaran, kegiatan sekolah,
-          maupun kerja sama pendidikan.
-        </p>
+      <h3 data-id="Hubungi Kami"
+          data-en="Contact Us">
+          Hubungi Kami
+      </h3>
 
-        <div class="kontak-cards">
+      <p data-id="Silakan hubungi kami untuk informasi pendaftaran, kegiatan sekolah, maupun kerja sama pendidikan."
+         data-en="Please contact us for registration information, school activities, or educational partnerships.">
+          Silakan hubungi kami untuk informasi pendaftaran, kegiatan sekolah, maupun kerja sama pendidikan.
+      </p>
 
-          <div class="kontak-card">
-            <div class="kontak-icon"></div>
-            <div>
-              <h4>Alamat Sekolah</h4>
+
+    <div class="kontak-cards">
+
+    <div class="kontak-card">
+    <div class="kontak-icon"></div>
+    <div>
+        <h4 data-id="Alamat Sekolah"
+            data-en="School Address">
+            Alamat Sekolah
+        </h4>
+
               <span>Jl. H. Dul No.36, Bojong Pd. Terong, Kec. Cipayung, Kota Depok, Jawa Barat 16436</span>
             </div>
           </div>
@@ -349,7 +556,7 @@
 
         </div>
 
-        <a href="https://wa.me/6289607530096" target="_blank" class="btn-wa">
+        <a href="https://wa.me/6289607530096?text=Assalamu%27alaikum,%20saya%20ingin%20mendaftarkan%20anak%20saya%20di%20SDIT%20ARROSAANIYYAH.%20Mohon%20informasi%20lebih%20lanjut%20mengenai%20pendaftaran.%20Terima%20kasih." target="_blank" class="btn-wa">
           Chat via WhatsApp
         </a>
       </div>
@@ -387,46 +594,126 @@
 </section>
 
 
-
 <script>
-  function toggleMenu() {
-    document.getElementById("menu").classList.toggle("show");
-  }
+let currentSlide = 0;
+const slides = document.querySelectorAll(".hero-slide");
+const dots = document.querySelectorAll(".dot");
+
+function showSlide(index) {
+  slides.forEach(slide => slide.classList.remove("active"));
+  dots.forEach(dot => dot.classList.remove("active"));
+
+  slides[index].classList.add("active");
+  dots[index].classList.add("active");
+
+  currentSlide = index;
+}
+
+function nextSlide() {
+  let next = currentSlide + 1;
+  if (next >= slides.length) next = 0;
+  showSlide(next);
+}
+
+function prevSlide() {
+  let prev = currentSlide - 1;
+  if (prev < 0) prev = slides.length - 1;
+  showSlide(prev);
+}
+
+function goSlide(index) {
+  showSlide(index);
+}
+
+/* Auto slide */
+setInterval(() => {
+  nextSlide();
+}, 7000);
 </script>
 
 <script>
-  const slides = document.querySelector(".slides");
-  const images = document.querySelectorAll(".slides img");
-  const prevBtn = document.querySelector(".prev");
-  const nextBtn = document.querySelector(".next");
+  const slidesTentang = document.querySelector(".slides");
+  const imagesTentang = document.querySelectorAll(".slides img");
+  const prevTentang = document.querySelector(".slider .prev");
+  const nextTentang = document.querySelector(".slider .next");
 
-  let index = 0;
+  let indexTentang = 0;
 
-  function showSlide() {
-    slides.style.transform = `translateX(${-index * images[0].clientWidth}px)`;
+  function showSlideTentang() {
+    const width = imagesTentang[0].clientWidth;
+    slidesTentang.style.transform = `translateX(${-indexTentang * width}px)`;
   }
 
-  nextBtn.addEventListener("click", () => {
-    index++;
-    if (index >= images.length) index = 0;
-    showSlide();
+  nextTentang.addEventListener("click", () => {
+    indexTentang++;
+    if (indexTentang >= imagesTentang.length) indexTentang = 0;
+    showSlideTentang();
   });
 
-  prevBtn.addEventListener("click", () => {
-    index--;
-    if (index < 0) index = images.length - 1;
-    showSlide();
+  prevTentang.addEventListener("click", () => {
+    indexTentang--;
+    if (indexTentang < 0) indexTentang = imagesTentang.length - 1;
+    showSlideTentang();
   });
 
-  // Auto slide setiap 10 detik
+  // auto slide setiap 5 detik
   setInterval(() => {
-    index++;
-    if (index >= images.length) index = 0;
-    showSlide();
-  }, 10000);
+    indexTentang++;
+    if (indexTentang >= imagesTentang.length) indexTentang = 0;
+    showSlideTentang();
+  }, 5000);
 
-  window.addEventListener("resize", showSlide);
+  window.addEventListener("resize", showSlideTentang);
 </script>
+
+<script>
+function setLanguage(lang) {
+  const elements = document.querySelectorAll("[data-id]");
+
+  elements.forEach(el => {
+    el.innerHTML = el.getAttribute("data-" + lang);
+  });
+
+  // tombol active
+  document.getElementById("btn-id").classList.remove("active");
+  document.getElementById("btn-en").classList.remove("active");
+
+  if (lang === "id") {
+    document.getElementById("btn-id").classList.add("active");
+  } else {
+    document.getElementById("btn-en").classList.add("active");
+  }
+
+  // simpan pilihan bahasa agar tidak reset ketika refresh
+  localStorage.setItem("language", lang);
+}
+
+// auto load bahasa terakhir
+window.addEventListener("load", () => {
+  const savedLang = localStorage.getItem("language") || "id";
+  setLanguage(savedLang);
+});
+</script>
+
+
+
+<script>
+function toggleMenu() {
+  document.getElementById("menu").classList.toggle("show");
+}
+
+/* klik dimana saja -> menu ketutup */
+document.addEventListener("click", function(event) {
+  const menu = document.getElementById("menu");
+  const hamburger = document.querySelector(".hamburger");
+
+  if (!menu.contains(event.target) && !hamburger.contains(event.target)) {
+    menu.classList.remove("show");
+  }
+});
+</script>
+
+
 
 <script src="script.js"></script>
 
