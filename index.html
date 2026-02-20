@@ -71,12 +71,16 @@
       
      <div class="language">
   <div class="lang-selected" onclick="toggleLang()">
-     <span id="current-lang">ID</span> ▼
+    <img id="current-flag" src="https://flagcdn.com/w40/id.png" alt="ID">
   </div>
 
   <div class="lang-options" id="langOptions">
-    <div onclick="setLang('id')"> Indonesia</div>
-    <div onclick="setLang('en')"> English</div>
+    <div onclick="setLang('id')">
+      <img src="https://flagcdn.com/w40/id.png"> Indonesia
+    </div>
+    <div onclick="setLang('en')">
+      <img src="https://flagcdn.com/w40/gb.png"> English
+    </div>
   </div>
 </div>
 
@@ -674,14 +678,20 @@ function toggleLang() {
 }
 
 function setLang(lang) {
-  document.getElementById("current-lang").innerText = lang.toUpperCase();
+
+  const flag = document.getElementById("current-flag");
+
+  if (lang === "en") {
+    flag.src = "https://flagcdn.com/w40/gb.png";
+  } else {
+    flag.src = "https://flagcdn.com/w40/id.png";
+  }
+
   document.getElementById("langOptions").style.display = "none";
 
-  // Panggil fungsi ganti bahasa kamu di sini
   changeLanguage(lang);
 }
 
-// klik luar = tutup dropdown
 window.addEventListener("click", function(e){
   if (!e.target.closest(".language")) {
     document.getElementById("langOptions").style.display = "none";
