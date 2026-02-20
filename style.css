@@ -1529,4 +1529,17 @@ height: 130px;
   }
 }
 
+@media (max-width:480px) {
+  .logo-text h3 {
+    font-size: 14px;
+  }
+  .logo-text p {
+    font-size: 11px;
+  }
+  .lang-btn {
+    padding: 6px 10px;
+    font-size: 12px;
+  }
+}
+
 
