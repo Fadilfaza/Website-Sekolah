@@ -1470,24 +1470,28 @@ height: 130px;
 
 .language {
   position: relative;
-  font-size: 14px;
-  cursor: pointer;
 }
 
 .lang-selected {
-  background: white;
-  padding: 6px 12px;
-  border-radius: 20px;
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.lang-selected img {
+  width: 28px;
 }
 
 .lang-options {
   position: absolute;
-  top: 40px;
+  top: 65px;
   right: 0;
   background: white;
-  border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
   display: none;
   overflow: hidden;
   min-width: 150px;
@@ -1495,11 +1499,19 @@ height: 130px;
 
 .lang-options div {
   padding: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
   transition: 0.2s;
 }
 
 .lang-options div:hover {
-  background: #077003;
+  background: #228f06;
+}
+
+.lang-options img {
+  width: 20px;
 }
 
 /* HP: Hilangkan sosial media atas */
@@ -1513,6 +1525,7 @@ height: 130px;
   width: 22px;
   height: 22px;
   object-fit: contain;
+  margin-left: 30px;
   transition: 0.3s;
 }
 
