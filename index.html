@@ -39,6 +39,8 @@
     </div>
   </div>
 
+  
+
   <nav class="menu" id="menu">
     <a href="#beranda" data-id="Beranda" data-en="Home">Beranda</a>
     <a href="#profil" data-id="Profil" data-en="Profile">Profil</a>
@@ -71,15 +73,15 @@
       
      <div class="language">
   <div class="lang-selected" onclick="toggleLang()">
-    <img id="current-flag" src="https://flagcdn.com/w40/id.png" alt="ID">
+    <img id="current-flag" src="ina.png" alt="ID">
   </div>
 
   <div class="lang-options" id="langOptions">
     <div onclick="setLang('id')">
-      <img src="https://flagcdn.com/w40/id.png"> Indonesia
+      <img src="ina.png"> Indonesia
     </div>
     <div onclick="setLang('en')">
-      <img src="https://flagcdn.com/w40/gb.png"> English
+      <img src="eng.png"> English
     </div>
   </div>
 </div>
@@ -203,9 +205,9 @@
     Visi
         </h3>
 
-    <p data-id="Mewujudkan Generasi Qurani yang beriman, berilmu luas dan berakhlak mulia untuk menjadi pemimpin masa depan yang bermanfaat bagi umat dan bangsa."
+    <p data-id="Mewujudkan Peserta didik yang berakhlak, berilmu serta dapat berkontribusi dalam membangun masa depan yang bermanfaat bagi umat dan bangsa."
    data-en="To create a Qur'anic generation with strong faith, broad knowledge, and noble character, becoming future leaders who bring benefit to the nation and society.">
-   Mewujudkan Generasi Qurani yang beriman, berilmu luas dan berakhlak mulia untuk menjadi pemimpin masa depan yang bermanfaatt bagi umat dan bangsa.
+   Mewujudkan Peserta didik yang berakhlak, berilmu serta dapat berkontribusi dalam membangun masa depan yang bermanfaat bagi umat dan bangsa.
     </p>
 
       </div>
@@ -219,11 +221,29 @@
              Misi
         </h3>
 
-    <p  data-id="Menyelenggarakan pendidikan berkualitas yang mengintegrasikan ilmu agama dan ilmu umum."
-        data-en="To provide quality education by integrating Islamic knowledge and general knowledge in balance.">
-        Menyelenggarakan pendidikan berkualitas yang mengintegrasikan ilmu agama dan ilmu umum
-    </p>
+        <ul>
 
+          <li data-id="Membentuk generasi berakhlaqul karimah"
+            data-en="Shaping a generation with good character">
+            Membentuk generasi berakhlaqul karimah
+          </li>
+
+          <li data-id="Membentuk generasi qurani dan religius"
+            data-en="Shaping a Qur'anic and religious generation">
+            Membentuk generasi qurani dan religius
+          </li>
+
+          <li data-id="Membentuk generasi yang kritis dan mandiri serta membentuk generasi yang bertanggung jawab dan disiplin"
+            data-en="Shaping a critical and independent generation ">
+            Membentuk generasi yang kritis dan mandiri  
+          </li>
+
+          <li data-id="Membentuk generasi yang bertanggung jawab dan disiplin"
+            data-en="Shaping a responsible and disciplined generation">
+            Membentuk generasi yang bertanggung jawab dan disiplin
+          </li>
+          
+        </ul>
       </div>
 
       <div class="Visi-card">
@@ -362,7 +382,7 @@
   </div>
 </section>
 
-<section class="gallery-section">
+<section class="gallery-section"id="galeri">
 
   <div class="tag-title">  
       <h2 data-id="GALERI KEGIATAN"
@@ -532,7 +552,7 @@
     <div class="kontak-cards">
 
     <div class="kontak-card">
-    <div class="kontak-icon"></div>
+    <div class="kontak-icon">📍</div>
     <div>
         <h4 data-id="Alamat Sekolah"
             data-en="School Address">
@@ -544,15 +564,15 @@
           </div>
 
           <div class="kontak-card">
-            <div class="kontak-icon"></div>
+            <div class="kontak-icon">☎</div>
             <div>
-              <h4>WhatsApp</h4>
+              <h4> WhatsApp</h4>
               <span>0896-0753-0096</span>
             </div>
           </div>
 
           <div class="kontak-card">
-            <div class="kontak-icon"></div>
+            <div class="kontak-icon">✉</div>
             <div>
               <h4>Email</h4>
               <span>info@sdit-arrosaanniyyah.sch.id</span>
@@ -584,20 +604,14 @@
 
     </div>
 
-    <!-- MAPS -->
-    <div class="kontak-maps">
-      <iframe 
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126910.75992541077!2d106.74733070000001!3d-6.4024846!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69ebf0b6d08c73%3A0x8f4d5e9d7c1c9e0b!2sDepok%2C%20Jawa%20Barat!5e0!3m2!1sid!2sid!4v1700000000000"
-        width="100%" height="350"
-        style="border:0;"
-        allowfullscreen=""
-        loading="lazy">
-      </iframe>
-    </div>
-
-  </div>
+    
 </section>
 
+<footer class="footer">
+  <p>
+    © 2026 SDIT ARROSAANIYYAH. All Rights Reserved.
+  </p>
+</footer>
 
 <script>
 let currentSlide = 0;
@@ -733,10 +747,74 @@ document.addEventListener("click", function(event) {
 </script>
 
 
-
 <script src="script.js"></script>
 
+<!-- POPUP INFO PENDAFTARAN -->
+<div id="popupInfo" class="popup-overlay">
 
+  <div class="popup-container">
+
+    <span class="popup-close">&times;</span>
+
+    <div class="popup-slider">
+
+      <div class="popup-slide active">
+        <img src="brosur1.png">
+      </div>
+
+      <div class="popup-slide">
+        <img src="brosur2.png">
+      </div>
+
+      
+
+    </div>
+
+    <div class="popup-dots">
+      <span class="popup-dot active"></span>
+      <span class="popup-dot"></span>
+      <span class="popup-dot"></span>
+    </div>
+
+  </div>
+
+</div>
+
+<script>
+let popupSlides = document.querySelectorAll(".popup-slide");
+let popupDots = document.querySelectorAll(".popup-dot");
+let popupIndex = 0;
+
+function showPopupSlide(index){
+
+popupSlides.forEach(slide => slide.classList.remove("active"));
+popupDots.forEach(dot => dot.classList.remove("active"));
+
+popupSlides[index].classList.add("active");
+popupDots[index].classList.add("active");
+
+}
+
+function nextPopupSlide(){
+
+popupIndex++;
+
+if(popupIndex >= popupSlides.length){
+popupIndex = 0;
+}
+
+showPopupSlide(popupIndex);
+
+}
+
+setInterval(nextPopupSlide,4000);
+
+/* CLOSE POPUP */
+
+document.querySelector(".popup-close").onclick = function(){
+document.getElementById("popupInfo").style.display="none";
+}
+</script>
 
 </body>
 </html>
