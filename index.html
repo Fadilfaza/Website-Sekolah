@@ -816,5 +816,31 @@ document.getElementById("popupInfo").style.display="none";
 }
 </script>
 
+<script>
+
+window.addEventListener("load", function(){
+
+  const loader = document.getElementById("preloader");
+  const popup = document.getElementById("popupInfo");
+
+  // loader muter 10 detik
+  setTimeout(() => {
+
+    loader.style.opacity = "0";
+
+    setTimeout(() => {
+      loader.style.display = "none";
+
+      // popup muncul setelah loader hilang
+      popup.classList.add("show");
+
+    }, 1500); // animasi hilang loader
+
+  }, 1000); // 
+
+});
+
+</script>
+
 </body>
 </html>
